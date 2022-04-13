@@ -16,7 +16,7 @@ Verilog 및 SystemVerilog(이 문서에서 일반적으로 "Verilog"라고 함)�
 
 이 스타일 가이드는 Verilog-2001 및 SystemVerilog 호환 코드 모두에 대한 스타일을 정의합니다. 또한 이 스타일 가이드는 합성 가능한 코드와 테스트 벤치 코드 모두에 대한 스타일을 정의합니다.
 
-이 스타일 가이드의 요약된 표 표현은 [부록](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#appendix---condensed-style-guide) 을 참조하십시오.
+이 스타일 가이드의 요약된 표 표현은 [부록](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#appendix---condensed-style-guide) 을 참조하십시오.
 
 
 
@@ -24,104 +24,104 @@ Verilog 및 SystemVerilog(이 문서에서 일반적으로 "Verilog"라고 함)�
 
 - lowRISC Verilog Coding Style Guide
   - Basics
-    - [Summary](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#summary)
-    - [Terminology Conventions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#terminology-conventions)
-    - [Default to C-like Formatting](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#default-to-c-like-formatting)
-    - [Style Guide Exceptions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#style-guide-exceptions)
-    - [Which Verilog to Use](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#which-verilog-to-use)
+    - [Summary](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#summary)
+    - [Terminology Conventions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#terminology-conventions)
+    - [Default to C-like Formatting](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#default-to-c-like-formatting)
+    - [Style Guide Exceptions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#style-guide-exceptions)
+    - [Which Verilog to Use](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#which-verilog-to-use)
   - Verilog/SystemVerilog Conventions
-    - [Summary](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#summary-1)
-    - [File Extensions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#file-extensions)
+    - [Summary](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#summary-1)
+    - [File Extensions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#file-extensions)
     - General File Appearance
-      - [Characters](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#characters)
-      - [POSIX File Endings](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#posix-file-endings)
-      - [Line Length](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#line-length)
-      - [No Tabs](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#no-tabs)
-      - [No Trailing Spaces](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#no-trailing-spaces)
-    - [Begin / End](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#begin--end)
+      - [Characters](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#characters)
+      - [POSIX File Endings](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#posix-file-endings)
+      - [Line Length](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#line-length)
+      - [No Tabs](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#no-tabs)
+      - [No Trailing Spaces](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#no-trailing-spaces)
+    - [Begin / End](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#begin--end)
     - Indentation
-      - [Indented Sections](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#indented-sections)
-      - [Line Wrapping](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#line-wrapping)
-      - [Preprocessor Directives](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#preprocessor-directives)
+      - [Indented Sections](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#indented-sections)
+      - [Line Wrapping](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#line-wrapping)
+      - [Preprocessor Directives](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#preprocessor-directives)
     - Spacing
-      - [Comma-delimited Lists](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#comma-delimited-lists)
-      - [Tabular Alignment](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#tabular-alignment)
-      - [Expressions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#expressions)
-      - [Array Dimensions in Declarations](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#array-dimensions-in-declarations)
-      - [Parameterized Types](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#parameterized-types)
-      - [Labels](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#labels)
-      - [Case items](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#case-items)
-      - [Function And Task Calls](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#function-and-task-calls)
-      - [Macro Calls](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#macro-calls)
-      - [Line Continuation](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#line-continuation)
-      - [Space Around Keywords](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#space-around-keywords)
+      - [Comma-delimited Lists](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#comma-delimited-lists)
+      - [Tabular Alignment](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#tabular-alignment)
+      - [Expressions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#expressions)
+      - [Array Dimensions in Declarations](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#array-dimensions-in-declarations)
+      - [Parameterized Types](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#parameterized-types)
+      - [Labels](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#labels)
+      - [Case items](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#case-items)
+      - [Function And Task Calls](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#function-and-task-calls)
+      - [Macro Calls](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#macro-calls)
+      - [Line Continuation](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#line-continuation)
+      - [Space Around Keywords](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#space-around-keywords)
     - Parentheses
-      - [Ternary Expressions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#ternary-expressions)
-    - [Comments](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#comments)
-    - [Declarations](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#declarations)
-    - [Basic Template](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#basic-template)
+      - [Ternary Expressions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#ternary-expressions)
+    - [Comments](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#comments)
+    - [Declarations](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#declarations)
+    - [Basic Template](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#basic-template)
   - Naming
-    - [Summary](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#summary-2)
+    - [Summary](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#summary-2)
     - Constants
-      - [Parameterized Objects (modules, etc.)](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#parameterized-objects-modules-etc)
-    - [Macro Definitions](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#macro-definitions)
-    - [Suffixes](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#suffixes)
-    - [Enumerations](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#enumerations)
+      - [Parameterized Objects (modules, etc.)](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#parameterized-objects-modules-etc)
+    - [Macro Definitions](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#macro-definitions)
+    - [Suffixes](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#suffixes)
+    - [Enumerations](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#enumerations)
     - Signal Naming
-      - [Use descriptive names](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#use-descriptive-names)
-      - [Prefixes](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#prefixes)
-      - [Hierarchical consistency](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-consistency)
-    - [Clocks](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#clocks)
-    - [Resets](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#resets)
+      - [Use descriptive names](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#use-descriptive-names)
+      - [Prefixes](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#prefixes)
+      - [Hierarchical consistency](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-consistency)
+    - [Clocks](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#clocks)
+    - [Resets](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#resets)
   - Language Features
-    - [Preferred SystemVerilog Constructs](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#preferred-systemverilog-constructs)
-    - [Package Dependencies](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#package-dependencies)
-    - [Module Declaration](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-declaration)
-    - [Module Instantiation](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation)
-    - [Constants](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#constants-1)
+    - [Preferred SystemVerilog Constructs](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#preferred-systemverilog-constructs)
+    - [Package Dependencies](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#package-dependencies)
+    - [Module Declaration](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#module-declaration)
+    - [Module Instantiation](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation)
+    - [Constants](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#constants-1)
     - Signal Widths
-      - [Always be explicit about the widths of number literals.](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#always-be-explicit-about-the-widths-of-number-literals)
-      - [Port connections on module instances must always match widths correctly.](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#port-connections-on-module-instances-must-always-match-widths-correctly)
-      - [Do not use multi-bit signals in a boolean context.](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#do-not-use-multi-bit-signals-in-a-boolean-context)
-      - [Bit Slicing](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#bit-slicing)
-      - [Handling Width Overflow](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#handling-width-overflow)
-    - [Blocking and Non-blocking Assignments](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#blocking-and-non-blocking-assignments)
-    - [Delay Modeling](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#delay-modeling)
-    - [Sequential Logic (Latches)](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#sequential-logic-latches)
-    - [Sequential Logic (Registers)](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#sequential-logic-registers)
+      - [Always be explicit about the widths of number literals.](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#always-be-explicit-about-the-widths-of-number-literals)
+      - [Port connections on module instances must always match widths correctly.](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#port-connections-on-module-instances-must-always-match-widths-correctly)
+      - [Do not use multi-bit signals in a boolean context.](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#do-not-use-multi-bit-signals-in-a-boolean-context)
+      - [Bit Slicing](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#bit-slicing)
+      - [Handling Width Overflow](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#handling-width-overflow)
+    - [Blocking and Non-blocking Assignments](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#blocking-and-non-blocking-assignments)
+    - [Delay Modeling](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#delay-modeling)
+    - [Sequential Logic (Latches)](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#sequential-logic-latches)
+    - [Sequential Logic (Registers)](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#sequential-logic-registers)
     - Don't Cares (`X`'s)
-      - [Catching errors where invalid values are consumed](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#catching-errors-where-invalid-values-are-consumed)
-      - [Specific Guidance on Case Statements and Ternaries](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#specific-guidance-on-case-statements-and-ternaries)
-      - [Dynamic Array Indexing](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#dynamic-array-indexing)
-    - [Combinational Logic](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#combinational-logic)
+      - [Catching errors where invalid values are consumed](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#catching-errors-where-invalid-values-are-consumed)
+      - [Specific Guidance on Case Statements and Ternaries](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#specific-guidance-on-case-statements-and-ternaries)
+      - [Dynamic Array Indexing](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#dynamic-array-indexing)
+    - [Combinational Logic](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#combinational-logic)
     - Case Statements
-      - [Wildcards in case items](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#wildcards-in-case-items)
-    - [Generate Constructs](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#generate-constructs)
-    - [Signed Arithmetic](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#signed-arithmetic)
-    - [Number Formatting](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#number-formatting)
-    - [Functions and Tasks](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#functions-and-tasks)
+      - [Wildcards in case items](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#wildcards-in-case-items)
+    - [Generate Constructs](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#generate-constructs)
+    - [Signed Arithmetic](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#signed-arithmetic)
+    - [Number Formatting](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#number-formatting)
+    - [Functions and Tasks](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#functions-and-tasks)
     - Problematic Language Features and Constructs
-      - [Floating begin-end blocks](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#floating-begin-end-blocks)
-      - [Hierarchical references](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-references)
+      - [Floating begin-end blocks](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#floating-begin-end-blocks)
+      - [Hierarchical references](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-references)
   - Design Conventions
-    - [Summary](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#summary-3)
-    - [Declare all signals](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#declare-all-signals)
-    - [Use `logic` for synthesis](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#use-logic-for-synthesis)
-    - [Logical vs. Bitwise](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#logical-vs-bitwise)
-    - [Packed Ordering](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#packed-ordering)
-    - [Unpacked Ordering](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#unpacked-ordering)
-    - [Finite State Machines](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#finite-state-machines)
-    - [Active-Low Signals](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#active-low-signals)
-    - [Differential Pairs](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#differential-pairs)
-    - [Delays](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#delays)
-    - [Wildcard import of packages](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#wildcard-import-of-packages)
+    - [Summary](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#summary-3)
+    - [Declare all signals](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#declare-all-signals)
+    - [Use `logic` for synthesis](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#use-logic-for-synthesis)
+    - [Logical vs. Bitwise](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#logical-vs-bitwise)
+    - [Packed Ordering](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#packed-ordering)
+    - [Unpacked Ordering](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#unpacked-ordering)
+    - [Finite State Machines](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#finite-state-machines)
+    - [Active-Low Signals](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#active-low-signals)
+    - [Differential Pairs](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#differential-pairs)
+    - [Delays](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#delays)
+    - [Wildcard import of packages](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#wildcard-import-of-packages)
     - Assertion Macros
-      - [A Note on Security Critical Applications](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#a-note-on-security-critical-applications)
+      - [A Note on Security Critical Applications](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#a-note-on-security-critical-applications)
   - Appendix - Condensed Style Guide
-    - [Basic Style Elements](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#basic-style-elements)
-    - [Construct Naming](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#construct-naming)
-    - [Suffixes for signals and types](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#suffixes-for-signals-and-types)
-    - [Language features](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#language-features-1)
+    - [Basic Style Elements](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#basic-style-elements)
+    - [Construct Naming](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#construct-naming)
+    - [Suffixes for signals and types](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#suffixes-for-signals-and-types)
+    - [Language features](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#language-features-1)
 
 
 
@@ -142,13 +142,13 @@ Verilog는 C와 유사한 언어이며 적절한 경우 기본적으로 [Google�
 
 특히 다음과 같은 특정 형식 지정 지침을 상속합니다.
 
-- 일반적으로 [이름](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#naming)은 설명적이어야 하며 약어는 피해야 합니다.
+- 일반적으로 [이름](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#naming)은 설명적이어야 하며 약어는 피해야 합니다.
 - ASCII가 아닌 문자는 사용할 수 없습니다.
 - 들여쓰기는 탭이 아닌 공백을 사용합니다. 들여쓰기는 중첩을 위한 2칸, 줄 연속을 위한 4칸입니다.
 - [조건식](https://google.github.io/styleguide/cppguide.html#Conditionals) `if` 에서 와 괄호 사이에 공백을 둡니다 .
 - 연산자 주위에 수평 공백을 사용하고 줄 끝에서 후행 공백을 피하십시오.
 - 일관되고 좋은 [구두점, 맞춤법 및 문법](https://google.github.io/styleguide/cppguide.html#Punctuation,_Spelling_and_Grammar) (주석 내)을 유지합니다.
-- [TODO](https://google.github.io/styleguide/cppguide.html#TODO_Comments) 및 [사용 중단](https://google.github.io/styleguide/cppguide.html#Deprecation_Comments) 에 대한 C와 같은 형식을 포함하여 [주석](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#comments) 에 표준 형식을 사용 합니다.
+- [TODO](https://google.github.io/styleguide/cppguide.html#TODO_Comments) 및 [사용 중단](https://google.github.io/styleguide/cppguide.html#Deprecation_Comments) 에 대한 C와 같은 형식을 포함하여 [주석](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#comments) 에 표준 형식을 사용 합니다.
 
 ### Style Guide Exceptions
 
@@ -160,7 +160,7 @@ Verilog는 C와 유사한 언어이며 적절한 경우 기본적으로 [Google�
 
 ***SystemVerilog-2017을 선호합니다.***
 
-모든 RTL 및 테스트는 [금지된 기능](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#problematic-language-features-and-constructs) 을 제외하고 [IEEE 1800-2017(SystemVerilog-2017) 표준](https://ieeexplore.ieee.org/document/8299595)에 따라 SystemVerilog에서 개발되어야 합니다.
+모든 RTL 및 테스트는 [금지된 기능](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#problematic-language-features-and-constructs) 을 제외하고 [IEEE 1800-2017(SystemVerilog-2017) 표준](https://ieeexplore.ieee.org/document/8299595)에 따라 SystemVerilog에서 개발되어야 합니다.
 
 표준 문서는 [IEEE GET](https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=80) 을 통해 무료로 제공됩니다 (등록 필요).
 
@@ -205,13 +205,13 @@ netlist 파일을 제외하고 각 `.sv` 또는 `.v` 파일에는 하나의 모�
 
 - 줄 바꿈이 불가능한 모든 위치(예: 포함 경로가 100자를 초과할 수 있음).
 
-[줄 바꿈](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#line-wrapping) 에는 긴 줄을 줄 바꿈하는 방법에 대한 추가 지침이 포함되어 있습니다.
+[줄 바꿈](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#line-wrapping) 에는 긴 줄을 줄 바꿈하는 방법에 대한 추가 지침이 포함되어 있습니다.
 
 #### No Tabs
 
 ***어디에서나 탭을 사용하지 마십시오.***
 
-공백을 사용하여 텍스트를 들여쓰거나 정렬합니다. [들여](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#indentation) 쓰기 및 줄 바꿈에 대한 규칙은 들여 쓰기를 참조하세요 .
+공백을 사용하여 텍스트를 들여쓰거나 정렬합니다. [들여](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#indentation) 쓰기 및 줄 바꿈에 대한 규칙은 들여 쓰기를 참조하세요 .
 
 파일에서 탭을 공백으로 변환하려면 [UNIX `확장`](http://linux.die.net/man/1/expand)  유틸리티를 사용할 수 있습니다.
 
@@ -483,7 +483,7 @@ tabular alignment는 두 개 이상의 유사한 선을 그룹화하여 동일�
 
 테이블 정렬이 필요한 구성:
 
-- [모듈 인스턴스화의 포트 표현식](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation)
+- [모듈 인스턴스화의 포트 표현식](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#module-instantiation)
 
 빈 줄로 구분된 각 코드 블록은 별도의 "테이블"로 처리됩니다.
 
@@ -602,7 +602,7 @@ data_t some_q [$];
 
 ***유형이 규정된 이름의 일부인 경우를 제외하고 유형 매개변수 앞에 공백 하나를 추가하십시오.***
 
-규정된 이름에는 해당 세그먼트를 연결하는 범위 연산자 `::`가 하나 이상 포함 됩니다. 규정된 이름(qualified name)의 공백은 한 기호에 대한 참조의 연속성을 깨뜨릴 수 있으므로 추가해서는 안 됩니다. 매개변수 목록은 [쉼표 뒤에 공백](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#comma-delimited-lists) 규칙 을 따라야 합니다 .
+규정된 이름에는 해당 세그먼트를 연결하는 범위 연산자 `::`가 하나 이상 포함 됩니다. 규정된 이름(qualified name)의 공백은 한 기호에 대한 참조의 연속성을 깨뜨릴 수 있으므로 추가해서는 안 됩니다. 매개변수 목록은 [쉼표 뒤에 공백](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#comma-delimited-lists) 규칙 을 따라야 합니다 .
 
 👍
 
@@ -791,7 +791,7 @@ assign foo = condition_a ? a :
 
 ### 코멘트
 
-***C++ 스타일 주석( `// foo`)이 선호됩니다. C 스타일 주석( `/\* bar \*/`)도 사용할 수 있습니다.***
+***C++ 스타일 주석( `// foo`)이 선호됩니다. C 스타일 주석( `/* bar */`)도 사용할 수 있습니다.***
 
 자체 줄의 주석은 다음 코드를 설명합니다. 코드가 있는 줄의 주석은 해당 코드 줄을 설명합니다.
 
@@ -1011,7 +1011,7 @@ endmodule
 
 ``define`모듈 을 `defparam`매개변수화하는 데 사용해서는 안 됩니다.
 
-[패키지 매개변수](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#constants) 를 사용 하여 매개변수 대신 계층 구조를 통해 전역 상수를 전송합니다. 범위가 특정 SystemVerilog 모듈 내부에 있는 상수를 선언하려면 [대신 를 ](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#constants)[사용`localparam`](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#constants) 하십시오.
+[패키지 매개변수](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#constants) 를 사용 하여 매개변수 대신 계층 구조를 통해 전역 상수를 전송합니다. 범위가 특정 SystemVerilog 모듈 내부에 있는 상수를 선언하려면 [대신 를 ](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#constants)[사용`localparam`](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#constants) 하십시오.
 
 매개변수화된 모듈을 사용하는 경우의 예:
 
@@ -1130,7 +1130,7 @@ endmodule // simple
 
 열거 유형 이름에는 소문자 영숫자 문자와 밑줄만 포함해야 합니다. 열거 유형 이름에 접미사를 붙여야 합니다 `_e`.
 
-열거 값 이름(상수)은 일반적으로 `ALL_CAPS`예를 들어 `READY_TO_SEND`상수 특성을 반영해야 하며, 특히 정의된 opcode 할당과 같이 변경할 수 없는 값의 경우에는 더욱 그렇습니다. `UpperCamelCase` 열거형의 할당된 값이 상태 머신 값과 같이 디자이너에게 실질적으로 신경 쓰지 않는 경우가 선호될 수 있습니다 . 이 권장 사항을 생각하는 방법에 대한 토론은 [상수](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#constants) 에 대한 대화를 참조하십시오 .
+열거 값 이름(상수)은 일반적으로 `ALL_CAPS`예를 들어 `READY_TO_SEND`상수 특성을 반영해야 하며, 특히 정의된 opcode 할당과 같이 변경할 수 없는 값의 경우에는 더욱 그렇습니다. `UpperCamelCase` 열거형의 할당된 값이 상태 머신 값과 같이 디자이너에게 실질적으로 신경 쓰지 않는 경우가 선호될 수 있습니다 . 이 권장 사항을 생각하는 방법에 대한 토론은 [상수](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#constants) 에 대한 대화를 참조하십시오 .
 
 👍
 
@@ -1198,7 +1198,7 @@ enum {  // Typedef is missing, storage type is missing.
 
 공통 접두사를 사용하여 함께 작동하는 신호 그룹을 식별합니다. 예를 들어, AXI-S 인터페이스의 모든 요소는 접두사를 공유합니다: `foo_valid`, `foo_ready`및 `foo_data`.
 
-또한 다중 클럭이 있는 모듈에 대해 어떤 신호가 어떤 클럭 그룹에 있는지 명확하게 레이블을 지정하려면 접두사를 사용해야 합니다. [자세한 내용은 시계 도메인](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#clocks) 섹션을 참조하세요.
+또한 다중 클럭이 있는 모듈에 대해 어떤 신호가 어떤 클럭 그룹에 있는지 명확하게 레이블을 지정하려면 접두사를 사용해야 합니다. [자세한 내용은 시계 도메인](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#clocks) 섹션을 참조하세요.
 
 예:
 
@@ -1233,7 +1233,7 @@ module fifo_controller (
 );
 ```
 
-이 명명 규칙을 사용하면 간단하고 일관된 규칙을 사용하여 포트 이름을 유사한 신호 이름에 쉽게 매핑할 수 있습니다. [자세한 내용은 계층적 일관성](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-consistency) 섹션을 참조 하십시오.
+이 명명 규칙을 사용하면 간단하고 일관된 규칙을 사용하여 포트 이름을 유사한 신호 이름에 쉽게 매핑할 수 있습니다. [자세한 내용은 계층적 일관성](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#hierarchical-consistency) 섹션을 참조 하십시오.
 
 #### 계층적 일관성
 
@@ -1401,7 +1401,7 @@ my_module i_my_instance (
 
 모듈에 정의된 것과 동일한 순서로 포트를 인스턴스화합니다.
 
-[테이블 형식](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#tabular-alignment) 으로 포트 표현식을 정렬 합니다. 가장 긴 포트 이름의 여는 괄호 앞에 공백을 포함하지 마십시오. 여는 괄호 뒤 또는 포트 표현식을 묶는 닫는 괄호 앞에 공백을 포함하지 마십시오.
+[테이블 형식](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#tabular-alignment) 으로 포트 표현식을 정렬 합니다. 가장 긴 포트 이름의 여는 괄호 앞에 공백을 포함하지 마십시오. 여는 괄호 뒤 또는 포트 표현식을 묶는 닫는 괄호 앞에 공백을 포함하지 마십시오.
 
 👎
 
@@ -2136,7 +2136,7 @@ end
 
 ### 기능 및 작업
 
-다음 섹션은 합성 가능한 RTL에만 적용됩니다. DV 사용을 [위한 설계 검증을 위한 코딩 스타일 가이드를](https://github.com/lowRISC/style-guides/blob/master/DVCodingStyle.md) 참조하십시오 .
+다음 섹션은 합성 가능한 RTL에만 적용됩니다. DV 사용을 [위한 설계 검증을 위한 코딩 스타일 가이드를](https://github.com/ParkDongho/style-guides/blob/master/DVCodingStyle.md) 참조하십시오 .
 
 ***합성 가능한 RTL에서는 선언된 함수의 사용이 허용됩니다 `automatic`. 작업을 사용해서는 안됩니다.***
 
@@ -2517,7 +2517,7 @@ logic [15:0] word_array[3] = '{word0, word1, word2};
 
 상태 머신의 enum 문은 상태 머신의 각 상태를 나열해야 합니다. 상태를 설명하는 주석은 아래의 조합 프로세스 블록에서 case 문으로 연기되어야 합니다.
 
-[상태는 다른 열거 상수](https://github.com/lowRISC/style-guides/blob/master/VerilogCodingStyle.md#enumerations)`UpperCamelCase` 와 마찬가지로 에 이름을 지정해야 합니다 .
+[상태는 다른 열거 상수](https://github.com/ParkDongho/style-guides/blob/master/VerilogCodingStyle.md#enumerations)`UpperCamelCase` 와 마찬가지로 에 이름을 지정해야 합니다 .
 
 특별한 상황을 제외하고 상태 머신의 초기 유휴 상태는 `Idle`또는 로 지정 `StIdle`됩니다. (명확성을 향상시키는 경우 대체 이름을 사용할 수 있습니다.)
 
@@ -2711,7 +2711,7 @@ endmodule
 `ASSERT_KNOWN(<name>, <signal>, <clk>, <reset condition>)
 ```
 
-이러한 매크로의 구현(다른 유용한 변형 포함)은 [https://github.com/lowRISC/opentitan/blob/master/hw/ip/prim/rtl/prim_assert.sv 에서 찾을 수 있습니다.](https://github.com/lowRISC/opentitan/blob/master/hw/ip/prim/rtl/prim_assert.sv)
+이러한 매크로의 구현(다른 유용한 변형 포함)은 [https://github.com/ParkDongho/opentitan/blob/master/hw/ip/prim/rtl/prim_assert.sv 에서 찾을 수 있습니다.](https://github.com/ParkDongho/opentitan/blob/master/hw/ip/prim/rtl/prim_assert.sv)
 
 #### 보안 크리티컬 애플리케이션에 대한 참고 사항
 
